@@ -5,6 +5,5 @@ joinRoom(s)
 
 while True:
     persist = True
-    s = 2
 
 
