@@ -10,10 +10,9 @@ add anything we want on top of it. This is just how the bot communicates with Tw
 ##################################################################################################
 
 import socket
+from settings import *
 
-from settings import HOST, PORT, PASS, IDENT, CHANNEL
-
-
+message = ""
 def openSocket():
     s = socket.socket()
     s.connect((HOST, PORT))
@@ -26,4 +25,5 @@ def sendMessage(s, message):
     messageTemp = "PRIVMSG #" + CHANNEL + " :" + message
     s.send(bytes(messageTemp + "\r\n",'UTF-8'))
     print("Sent: " + messageTemp)
+
 
