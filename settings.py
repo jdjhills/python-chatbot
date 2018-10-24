@@ -6,7 +6,7 @@ in this file under "CHANNEL".
 
 HOST = "irc.twitch.tv"
 PORT = 6667
-PASS = "" #oath token from twitchapps.com for bot
-NICK = "" #bot's username
+PASS = "oauth:a06voyu2f86nxfd0rs6qidgaduzbsr" #oath token from twitchapps.com for bot
+IDENT = "chatbotteststream" #bot's username
 CHANNEL = "joshchatbottest" #streamer's username
 
