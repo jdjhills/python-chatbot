@@ -6,7 +6,7 @@ from Read import getUser, getMessage
 s = (openSocket())
 joinRoom(s)
 readBuffer = ""
-
+'''look at NLTM'''
 #############################################################
 ''' Confusing IRC stuff '''
 while True:  # Infinite loop
@@ -25,7 +25,20 @@ while True:  # Infinite loop
         if "!name" in line:  # Tells user their username
             nameResponse = "Your name is: " + user
             sendMessage(s, nameResponse)
+        if "!weather" in line:
+            locationList = line.split("-")
+            location = locationList[1]
+            print(location)
+            sendMessage(s, location)
+            if location == "":
+                errorMessage = user + ", use the command like !weather -location"
+                sendMessage(s, errorMessage)
+            else:
+                pass
+
+
         print(user + " typed: " + message)
+
 
 
 
